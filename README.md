@@ -7,6 +7,19 @@ One of the most important ways patients can help themselves and each other is to
 
 In order for patients to help each other, access to structured medical data is needed. By sharing such information, researchers can applying techniques such as machine learning algorithms to help make a diagnosis for difficult cases. Such data is currently very limited. While there are websites such as PatientsLikeMe that allows users to share data, the data itself is not freely available to researchers. The government also collects data, but approval through an accepted study must be given. P2pdx allows anyone to access the data without any approval, it is public domain. This will allow both hobbyists and professionals alike the opportunity to help improve diagnostics.
 
+## Features
+ * Track medical data including:
+   * Lab test results
+   * Symptoms
+   * Vitals
+   * Visit history
+   * Medications
+   * Demographics
+ * Data is shared reducing duplication when entering information
+ * Visualize results with graphing capabilities
+ * Search data with basic filtering capabilities
+ * Perform research on dataset with R or Python with SQLite reading helper scripts
+
 ## Anonymity
 Privacy is always a concern when it comes to medical data. Users themselves will be entering medical data into the system and must therefore ensure that they are not including any personally identifying information. Information should be entered in accordance with HIPPA anonymous data specifications as listed [here](https://www.irb.cornell.edu/documents/HIPAA%20Identifiers.pdf). 
 
