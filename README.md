@@ -20,6 +20,28 @@ In order for patients to help each other, access to structured medical data is n
  * Search data with basic filtering capabilities
  * Perform research on dataset with R or Python with SQLite reading helper scripts
 
+## Getting Started
+### Download ZeroNet
+* Download ZeroBundle package:
+  * [Microsoft Windows](https://github.com/HelloZeroNet/ZeroBundle/raw/master/dist/ZeroBundle-win.zip)
+  * [Apple OS X](https://github.com/HelloZeroNet/ZeroBundle/raw/master/dist/ZeroBundle-mac-osx.zip)
+  * [Linux 64bit](https://github.com/HelloZeroNet/ZeroBundle/raw/master/dist/ZeroBundle-linux64.tar.gz)
+  * [Linux 32bit](https://github.com/HelloZeroNet/ZeroBundle/raw/master/dist/ZeroBundle-linux32.tar.gz)
+* Unpack anywhere
+* Run `ZeroNet.cmd` (win), `ZeroNet(.app)` (osx), `ZeroNet.sh` (linux)
+
+If you get "classic environment no longer supported" error on OS X: Open a Terminal window and drop ZeroNet.app on it
+It downloads the latest version of ZeroNet then starts it automatically.
+
+### Create ZeroID
+* Visit [ZeroID site](http://127.0.0.1:43110/zeroid.bit)
+* Create user name
+
+### Visit p2pdx
+* Visit [p2pdx](http://127.0.0.1:43110/1NGuD84kVgh3iBTQegdX8z7DbsGLZjHkvz)
+* Login with your ZeroID user name
+* Start sharing and browing medical data
+
 ## Anonymity
 Privacy is always a concern when it comes to medical data. Users themselves will be entering medical data into the system and must therefore ensure that they are not including any personally identifying information. Information should be entered in accordance with HIPPA anonymous data specifications as listed [here](https://www.irb.cornell.edu/documents/HIPAA%20Identifiers.pdf). 
 
