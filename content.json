@@ -1,0 +1,61 @@
+{
+ "address": "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi",
+ "address_index": 69378627,
+ "cloneable": true,
+ "cloned_from": "1AvF5TpcaamRNtqvN1cnDEWzNmUtD47Npg",
+ "description": "",
+ "files": {
+  "data-default/users/content-default.json": {
+   "sha512": "e1f8d79e306fd6c8c49e0f41f546456ab1952276445d3733909c2883df6f8b0d",
+   "size": 620
+  },
+  "dbschema.json": {
+   "sha512": "b8a90ff57bfd13d4488daf30e88765ffd7ac4f9e9f28cbcc6b5eeccc514e1582",
+   "size": 485
+  },
+  "index.html": {
+   "sha512": "fb84d387ed80856cd40bb2acae8562b1a0a8f4691974fb6985ae18ba6a418363",
+   "size": 998
+  },
+  "js/ZeroChat.coffee": {
+   "sha512": "17a8549cb7aa24be38dea0a344a5bc13569930c8dc9c571e64bcadc5a51903f2",
+   "size": 4593
+  },
+  "js/all.js": {
+   "sha512": "1184d732054e149445903c7a1b4eee2949b514b2a624fc684fcbd3945a7e808b",
+   "size": 11095
+  },
+  "js/lib/ZeroFrame.coffee": {
+   "sha512": "96a11e88429e2fa26c47f5d24bf52d030d506f1dfecb2a4e2c5e034cc5d07e31",
+   "size": 1335
+  },
+  "js/utils/Text.coffee": {
+   "sha512": "5ab4f0010ebb413b2347b1eed737f1bb8c7feb8878361cc0326a224fb25b43b1",
+   "size": 248
+  },
+  "js/utils/Time.coffee": {
+   "sha512": "9cf900d99e200d70da56673d643f17f73d524912ecd6c518d4eb1bbc0c372ec0",
+   "size": 861
+  }
+ },
+ "ignore": "data/.*",
+ "includes": {
+  "data/users/content.json": {
+   "signers": [],
+   "signers_required": 1
+  }
+ },
+ "inner_path": "content.json",
+ "modified": 1470174115.802146,
+ "sign": [
+  70524294490123603151816274138850581136082687104288304458689208783158128289137,
+  74130311639552117182413710255594450366277288559781022840879254918992258535168
+ ],
+ "signers_sign": "HFGuSlT0n3O+kl+Fqel4YKBPb9l4vh/QmmYI88ouo9VF6hRKCq2EfOubrtmvCaqwRNTwbMSs5Sk5D15LGK9PYcs=",
+ "signs": {
+  "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi": "GwYjp1bw1XuIkF4haiU3ZNGy12WAfnRFsSdIPtvyZ8mojPpFEXhYrFLgsLA874xp7h1mXVY0jzNq6aX6fwOuX9g="
+ },
+ "signs_required": 1,
+ "title": "myZeroChat tutorial result",
+ "zeronet_version": "0.3.7"
+}
