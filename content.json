@@ -3,15 +3,23 @@
  "address_index": 69378627,
  "cloneable": true,
  "cloned_from": "1AvF5TpcaamRNtqvN1cnDEWzNmUtD47Npg",
- "description": "",
+ "description": "Peer to peer medical data sharing and diagnosis",
  "files": {
+  "LICENSE": {
+   "sha512": "552aec8d120c9d931769f6a6b794716fce978d0055715de21746dc0f064f4a0f",
+   "size": 35141
+  },
+  "README.md": {
+   "sha512": "a32fe1cd685977f86a4baab91a06e16180eb026f02298cf360646f0a58159bb3",
+   "size": 4081
+  },
   "data-default/users/content-default.json": {
    "sha512": "e1f8d79e306fd6c8c49e0f41f546456ab1952276445d3733909c2883df6f8b0d",
    "size": 620
   },
   "dbschema.json": {
-   "sha512": "b8a90ff57bfd13d4488daf30e88765ffd7ac4f9e9f28cbcc6b5eeccc514e1582",
-   "size": 485
+   "sha512": "db515df991a4d06abf5c6896e2d04bfc390b837eca1ac363602ade53c6e5b9d6",
+   "size": 480
   },
   "index.html": {
    "sha512": "fb84d387ed80856cd40bb2acae8562b1a0a8f4691974fb6985ae18ba6a418363",
@@ -38,7 +46,7 @@
    "size": 861
   }
  },
- "ignore": "data/.*",
+ "ignore": "data/.*|.git/.*",
  "includes": {
   "data/users/content.json": {
    "signers": [],
@@ -46,16 +54,16 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1470174115.802146,
+ "modified": 1470269215.246112,
  "sign": [
-  70524294490123603151816274138850581136082687104288304458689208783158128289137,
-  74130311639552117182413710255594450366277288559781022840879254918992258535168
+  62956042371282093805576065532673991452463493482136653936901718534258980227034,
+  85726020888603768069708701803782343607499616458155011102846850050073274493149
  ],
  "signers_sign": "HFGuSlT0n3O+kl+Fqel4YKBPb9l4vh/QmmYI88ouo9VF6hRKCq2EfOubrtmvCaqwRNTwbMSs5Sk5D15LGK9PYcs=",
  "signs": {
-  "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi": "GwYjp1bw1XuIkF4haiU3ZNGy12WAfnRFsSdIPtvyZ8mojPpFEXhYrFLgsLA874xp7h1mXVY0jzNq6aX6fwOuX9g="
+  "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi": "HB3ldiPGcuK4SDKPzHIydMOv5EE7bC+d0xICqrrMLkw2OkZ6/TY4GEVBLR9xXnVWZjTmutHLauk0ETcNXpUZ4vI="
  },
  "signs_required": 1,
- "title": "myZeroChat tutorial result",
+ "title": "p2pdx",
  "zeronet_version": "0.3.7"
 }

@@ -1,6 +1,6 @@
 {
-	"db_name": "ZeroChat",
-	"db_file": "data/zerochat.db",
+	"db_name": "p2pdx",
+	"db_file": "data/p2pdx.db",
 	"version": 2,
 	"maps": {
 		"users/.+/data.json": {
