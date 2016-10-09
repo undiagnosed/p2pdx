@@ -1,25 +1,28 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-
-<style>
-* { font-family: monospace; line-height: 1.5em; font-size: 13px; vertical-align: middle; }
-body { background-color: white; backface-visibility: hidden; }
-input#message { padding: 5px; width: 50%; height: 34px; }
-input#send { height: 34px; margin-left: -2px; }
-ul { padding: 0px; }
-li { list-style-type: none; border-top: 1px solid #eee; padding: 5px 0px; padding-left: 130px; }
-li:nth-child(odd) { background-color: #F9FAFD; }
-li b { color: #3F51B5; }
-small { color: #999; width: 130px; display: inline-block; text-align: right; margin-left: -136px; }
-</style>
-
+ <title>ZeroMe!</title>
+ <meta charset="utf-8">
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Custom styles for this template -->
+ <link href="starter-template.css" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="css/all.css" /> -->
+ <base href="" target="_top" id="base">
+ <script>base.href = document.location.href.replace("/media", "").replace("index.html", "").replace(/[&?]wrapper=False/, "").replace(/[&?]wrapper_nonce=[A-Za-z0-9]+/, "")</script>
 </head>
 <body>
-<a href="#Select+user" id="select_user" onclick='return Page.selectUser()'>Select user</a>:
-<input type="text" id="message" onkeypress="if (event.keyCode == 13) Page.sendMessage()"><input type="button" id="send" value="Send!" onclick="return Page.sendMessage()"/>
-<ul id="messages">
- <li>Welcome to ZeroChat!</li>
-</ul>
-<script type="text/javascript" src="js/all.js" async></script>
+
+<div class="head-container">
+ <div id="Head"></div>
+</div>
+
+<div class="center" id="Content">
+</div>
+
+<script src="./bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/all.js" asyc></script>
 </body>
 </html>
