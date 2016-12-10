@@ -35,12 +35,21 @@ class P2pdx extends ZeroFrame
         else
             @route(base.href.replace(/.*?\?/, ""))
 
-        @projector.replace($("#Head"), @header.render)
+        # @projector.replace($("#Head"), @header.render)
+        @projector.replace(document.getElementById("Head"), @header.render)
 
     # Parse incoming requests from UiWebsocket server
     onRequest: (cmd, params) ->
         if cmd == "setSiteInfo" # Site updated
             @setSiteInfo(params)
+        else if cmd == "wrapperPopState" # Site updated
+            if params.state
+                if not params.state.url
+                    params.state.url = params.href.replace /.*\?/, ""
+                @on_loaded.resolved = false
+                document.body.className = ""
+                window.scroll(window.pageXOffset, params.state.scrollTop or 0)
+                @route(params.state.url or "")
         else
             @log "Unknown command", cmd, params
 
@@ -69,7 +78,8 @@ class P2pdx extends ZeroFrame
                 @projector.detach(@content.render)
             @content = content
             @on_site_info.then =>
-                @projector.replace($("#Content"), @content.render)
+                # @projector.replace($("#Content"), @content.render)
+                @projector.replace(document.getElementById("Content"), @content.render)
 
     setUrl: (url, mode="push") ->
         url = url.replace(/.*?\?/, "")
@@ -102,6 +112,11 @@ class P2pdx extends ZeroFrame
 
             @setUrl e.currentTarget.search
             return false
+
+    handleLoad: =>
+        @log "TABLE EVENT !!!"
+        @content.handleLoad()
+        return false
 
     renderContent: =>
         if @site_info
