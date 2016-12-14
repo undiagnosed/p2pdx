@@ -28,6 +28,7 @@ class P2pdx extends ZeroFrame
         @visits = new ContentVisits()
         @diagnoses = new ContentDiagnoses()
         @medications = new ContentMedications()
+        @learnmore = new ContentLearnMore()
         @header = new Header()
 
         if base.href.indexOf("?") == -1
@@ -70,6 +71,8 @@ class P2pdx extends ZeroFrame
             content = @diagnoses
         else if @params.urls[0] == "Medications" and Page.site_info?.cert_user_id
             content = @medications
+        else if @params.urls[0] == "LearnMore" and Page.site_info?.cert_user_id
+            content = @learnmore
         else
             content = @home
         setTimeout ( => @content.update() ), 100

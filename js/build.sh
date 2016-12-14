@@ -22,6 +22,7 @@ ContentSymptoms.js \
 ContentTests.js \
 ContentVisits.js \
 ContentVitals.js \
+ContentLearnMore.js \
 Header.js \
 P2pdx.js \
 > all.js

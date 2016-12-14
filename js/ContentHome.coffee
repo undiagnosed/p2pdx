@@ -28,7 +28,7 @@ class ContentHome extends Class
                 h("div.container.text-center", [
                     h("h1", "Welcome to p2pdx")
                     h("p", "Take action and help improve medical diagnostics by sharing your data.")
-                    h("a.btn.btn-primary.btn-lg", "Learn More")
+                    h("a.btn.btn-primary.btn-lg", {href: "?LearnMore", id: "learnmore", onclick: Page.handleLinkClick}, "Learn More")
                     #h("p", @num_users, " registered users")
                     #h("p", @num_msgs, " messages")
                 ])
