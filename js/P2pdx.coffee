@@ -71,7 +71,7 @@ class P2pdx extends ZeroFrame
             content = @diagnoses
         else if @params.urls[0] == "Medications" and Page.site_info?.cert_user_id
             content = @medications
-        else if @params.urls[0] == "LearnMore" and Page.site_info?.cert_user_id
+        else if @params.urls[0] == "LearnMore"
             content = @learnmore
         else
             content = @home
