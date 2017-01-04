@@ -1,5 +1,7 @@
 # p2pdx - Decentralized medical data sharing
 
+![p2pdx](http://i.imgur.com/K2hAGUW.png)
+
 ## Purpose
 In the United States, the frequency of medical diagnostics errors in outpatient settings is estimated to be more than 5%. In the cases of rare diseases, the outlook is much worse. All too often, patients are told that their physical illness is psychological and are brushed aside, left to fend for themselves. Patients need to take action to help themselves and others.
 
