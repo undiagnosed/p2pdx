@@ -1,69 +1,289 @@
 {
  "address": "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi",
- "address_index": 69378627,
- "cloneable": true,
- "cloned_from": "1AvF5TpcaamRNtqvN1cnDEWzNmUtD47Npg",
  "description": "Peer to peer medical data sharing and diagnosis",
  "files": {
   "LICENSE": {
    "sha512": "552aec8d120c9d931769f6a6b794716fce978d0055715de21746dc0f064f4a0f",
    "size": 35141
   },
-  "README.md": {
-   "sha512": "a32fe1cd685977f86a4baab91a06e16180eb026f02298cf360646f0a58159bb3",
-   "size": 4081
+  "R/p2pdx-lab-viewer/labs.db": {
+   "sha512": "b84f8ad48937e5ef727d3d2cdfdf8765ee751af4b414e2a6f42b10e3ed0e3429",
+   "size": 37888
   },
-  "data-default/users/content-default.json": {
-   "sha512": "e1f8d79e306fd6c8c49e0f41f546456ab1952276445d3733909c2883df6f8b0d",
-   "size": 620
+  "R/p2pdx-lab-viewer/run.sh": {
+   "sha512": "8a67b09513eb9ee760114ba2728501e3a4651147d8eff779a322697cdfcb0f78",
+   "size": 26
+  },
+  "R/p2pdx-lab-viewer/server.R": {
+   "sha512": "1659525ec3549d11a1f40ba1cf620932ca12f4f3caf2b17d380f7ddfbe9f915d",
+   "size": 4974
+  },
+  "R/p2pdx-lab-viewer/ui.R": {
+   "sha512": "a370b72c6d11930205ab81705b7bcd33dc37df2c6ec38dc2cd67766fcd0c57c7",
+   "size": 773
+  },
+  "README.md": {
+   "sha512": "8e9ff5e02951d5a05a97e1767be8a9b81a265e3edfdaa6d8ab26f988af73b6e9",
+   "size": 4123
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap-theme.css": {
+   "sha512": "72d6d433d5564a6108482d39216bcf68ee1b08f8fbcf3af30ca7d787400c1e52",
+   "size": 26132
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap-theme.css.map": {
+   "sha512": "29fb34a587af9a4acb185ff3614c0d05afb29c4a759df232bc500553d76a80be",
+   "size": 47706
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap-theme.min.css": {
+   "sha512": "b6aba9e6de57c895e5bd7f1bfc4f69234b30180e00ba0b3316abdd58049adbfe",
+   "size": 23409
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map": {
+   "sha512": "35c4094dd35a6d01fecb850fc58f6815e9bd188e70bc5f2aa52d90030d3daea8",
+   "size": 25648
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap.css": {
+   "sha512": "a658bd68aabbe7c3cc76caa3340f80bb8089ed96ad2c20978a79e549fbf4db7c",
+   "size": 146010
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap.css.map": {
+   "sha512": "54232cbdef261553779d60d4c83cd84124147588fbebd3bef6ee0d1cb82473c2",
+   "size": 389287
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap.min.css": {
+   "sha512": "e8c5daf01eae68ed7c1e277a6e544c7ad108a0fa877fb531d6d9f2210769b7da",
+   "size": 121200
+  },
+  "bootstrap-3.3.7-dist/css/bootstrap.min.css.map": {
+   "sha512": "abb1a70ad42986762144fb8700d0adea6130e7a611cf9e978e51248a4e00b775",
+   "size": 542194
+  },
+  "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot": {
+   "sha512": "efc910c96b9f5c58ea11a84577cf60ae995503b1ee670bb7e7d4a413b7403769",
+   "size": 20127
+  },
+  "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg": {
+   "sha512": "c2e77eab327af1469097c31bc0daf820c066b0222059d8ff0ecebca974b62b75",
+   "size": 108738
+  },
+  "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf": {
+   "sha512": "2b066e06506ef20d69698d37cdec552176ef3f64a1151a99a1d02d72d39ce12c",
+   "size": 45404
+  },
+  "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff": {
+   "sha512": "f5366ab255afefe3fe06150e8509e776b5618ff50fe3e0fa8e4d715d645b1e44",
+   "size": 23424
+  },
+  "bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2": {
+   "sha512": "3811804f56ec3c82f0bef35de0a9250e546a1e357fb59e2784f610d638fec355",
+   "size": 18028
+  },
+  "bootstrap-3.3.7-dist/js/bootstrap.js": {
+   "sha512": "850780aed292053275b1e8118f24680e1e34f6d77bd0ba32eb6bac041dfe3b1e",
+   "size": 69707
+  },
+  "bootstrap-3.3.7-dist/js/bootstrap.min.js": {
+   "sha512": "8b3b64a1bb2f9e329f02d4cd7479065630184ebaed942ee61a9ff9e1ce34c28c",
+   "size": 37045
+  },
+  "bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js": {
+   "sha512": "53a2b560b20551672fbb0e6e72632d4fd1c7e2dd2ecf7337ebaaab179cb8be7c",
+   "size": 86709
+  },
+  "bootstrap-3.3.7-dist/js/npm.js": {
+   "sha512": "81bc329ad688d411fcf3decb28454238ec478c192b6ac19a3ee07e9939556cf1",
+   "size": 484
   },
   "dbschema.json": {
-   "sha512": "db515df991a4d06abf5c6896e2d04bfc390b837eca1ac363602ade53c6e5b9d6",
-   "size": 480
+   "sha512": "9afd5e40d6a2dadf370918f7ca2f545630a8c8b996bbcb8a5b640056cbf7a18c",
+   "size": 3434
+  },
+  "font-awesome/css/font-awesome.css": {
+   "sha512": "23750265cfe262aecb3c5dc547e2d754905b659585f28e48493a75ceb2979ca8",
+   "size": 26651
+  },
+  "font-awesome/css/font-awesome.min.css": {
+   "sha512": "e64cd0c0ff8d301c0f6bd9fe60934362dce7be85af57c9c3e1c719e42f8784cf",
+   "size": 21984
+  },
+  "font-awesome/fonts/FontAwesome.otf": {
+   "sha512": "67ddefca0aa9ae875bab3b1b87434d81a63ac602782c63b92c0a28005ded49be",
+   "size": 85908
+  },
+  "font-awesome/fonts/fontawesome-webfont.eot": {
+   "sha512": "3d0d435310306c977bfa7faf3be358e7184a27d7f83688131d295378f6ee0fe0",
+   "size": 56006
+  },
+  "font-awesome/fonts/fontawesome-webfont.svg": {
+   "sha512": "0920ae6b27ea8119e4697b974301a854686d3ca450197f95b0daab7647d8805e",
+   "size": 287007
+  },
+  "font-awesome/fonts/fontawesome-webfont.ttf": {
+   "sha512": "ec66825d9579bc96301b5c123bcec3fe950ba75ee91301355494017cdd48c74d",
+   "size": 112160
+  },
+  "font-awesome/fonts/fontawesome-webfont.woff": {
+   "sha512": "e96012d2fcd5df03c2f7385c9ee2a2932b3909659d59e32bf3155e102eaf9eb7",
+   "size": 65452
+  },
+  "font-awesome/less/bordered-pulled.less": {
+   "sha512": "200116b086fa13d8acad2601f23f7558e968b8f7d03b631eab8dcadf3d273ba1",
+   "size": 330
+  },
+  "font-awesome/less/core.less": {
+   "sha512": "2de7e840629534b735dae6ba3efb76159fa6dece9d0e5c2ea8b827bec87ed3a6",
+   "size": 418
+  },
+  "font-awesome/less/fixed-width.less": {
+   "sha512": "b7bf0de65815043012e95e8b1bac895e85c9a07c047c99ba4f5c132a00ace5ae",
+   "size": 119
+  },
+  "font-awesome/less/font-awesome.less": {
+   "sha512": "cbd47f6a99c176ed10ef1b8060a806f4bec6b09099bbf139e9d2f92b066f4307",
+   "size": 465
+  },
+  "font-awesome/less/icons.less": {
+   "sha512": "542a6759ac786cc63f1e44da4e0814ec4d0539a8325346a1635c8ad3fa09ad5e",
+   "size": 34455
+  },
+  "font-awesome/less/larger.less": {
+   "sha512": "5ba01d3b3c917dfcc0bf20a283397e677d420addb83c74d29f81d77658105c8d",
+   "size": 370
+  },
+  "font-awesome/less/list.less": {
+   "sha512": "a13c48c3ab87469b5e720287f5f1720f0588bb45a0700968879cbba7ba008d07",
+   "size": 377
+  },
+  "font-awesome/less/mixins.less": {
+   "sha512": "bb9f398d4a03e078e84a00d0a9b040a38993285bf54e768a72b59f2e50fd72e1",
+   "size": 892
+  },
+  "font-awesome/less/path.less": {
+   "sha512": "45b1152ddbe3fc94c0fc58ff5f2b06661970e3f997c5b0d84a5e240db0090b93",
+   "size": 684
+  },
+  "font-awesome/less/rotated-flipped.less": {
+   "sha512": "a906cde529bac0abc118201866c6e81ceed53ea5859795ebe87e52e1d04f1c32",
+   "size": 622
+  },
+  "font-awesome/less/spinning.less": {
+   "sha512": "fd2dfd61dd8148214252fb9b33158d383aa6a4888d5db1bfdc3edc679674b6d2",
+   "size": 582
+  },
+  "font-awesome/less/stacked.less": {
+   "sha512": "0f07e1507d430c8ade9cbf2460c8148d69fdce6b5b7c659247953e0e0235c512",
+   "size": 476
+  },
+  "font-awesome/less/variables.less": {
+   "sha512": "d042eb1b8b0a4e60ed8c695f68e06270707d2951bceb63cb7b8c2559282d1375",
+   "size": 15529
+  },
+  "font-awesome/scss/_bordered-pulled.scss": {
+   "sha512": "d7153055fec8da1b42cb96c523f34b9460d42f0e9fcb5865641913e7f3165e48",
+   "size": 332
+  },
+  "font-awesome/scss/_core.scss": {
+   "sha512": "c763d440fd4f639b42157363b2856d2c13441ab1aafb056ba387c3699dd81af8",
+   "size": 419
+  },
+  "font-awesome/scss/_fixed-width.scss": {
+   "sha512": "27392694f9bd1a671cd21517721a86c24725c51fcad4acaf09cb75a9e36bea34",
+   "size": 120
+  },
+  "font-awesome/scss/_icons.scss": {
+   "sha512": "b300d8c81fd8a7f73384dea2e719008884077e86b27c978ae264f360ad3afb2e",
+   "size": 35004
+  },
+  "font-awesome/scss/_larger.scss": {
+   "sha512": "ed6e63e7cdc9bae34810146c3dfd52b912f7b20219555994249f6f3dbd528673",
+   "size": 375
+  },
+  "font-awesome/scss/_list.scss": {
+   "sha512": "d8b110a513c41ba8a00620143aa01b2bca59f21306b64e96cb82e4739ea88bed",
+   "size": 378
+  },
+  "font-awesome/scss/_mixins.scss": {
+   "sha512": "cf9e0f20a1724972f8ebc2179fcd824415b4e74696e42320339058ec77dca5e7",
+   "size": 906
+  },
+  "font-awesome/scss/_path.scss": {
+   "sha512": "4b6cb75db9b619811fcbe327d9b8dfa673d67f17d1fcfd9ccfc6571f866129f9",
+   "size": 695
+  },
+  "font-awesome/scss/_rotated-flipped.scss": {
+   "sha512": "89a2a4009628540c88c9375c7f04bade6bb9b901575c12fe22d0031c10011f4c",
+   "size": 672
+  },
+  "font-awesome/scss/_spinning.scss": {
+   "sha512": "0fb5466cf27a0d8f4a21ab14b27c62431dbee2f587932a0f77060b956c3cb861",
+   "size": 583
+  },
+  "font-awesome/scss/_stacked.scss": {
+   "sha512": "25492b5ff68a6d2c8f9ddcebbea75b1f14a7f47d599bea5d75e1f5fabdb5e3d4",
+   "size": 482
+  },
+  "font-awesome/scss/_variables.scss": {
+   "sha512": "15d66c9920f8ff6e50d4010fae006ad3762a911b6721fbf4ab7fefdaba26ad8a",
+   "size": 15592
+  },
+  "font-awesome/scss/font-awesome.scss": {
+   "sha512": "7bbedcd9389034296783e3f738bbe64ff98cfa3ad8b83a71ae590b1cac622aa5",
+   "size": 405
+  },
+  "images/sort_asc.png": {
+   "sha512": "22ef70d4f4f9b57b513eb95aa11ae75a824da8890c38110ddd14c70a4b75b860",
+   "size": 160
+  },
+  "images/sort_asc_disabled.png": {
+   "sha512": "dfb71e20da28a3b6a2d105758f4d57a5ba9152fdc8e4b0673e1506f35367ac14",
+   "size": 148
+  },
+  "images/sort_both.png": {
+   "sha512": "fbcfa5849f6332d82ad1703b9ee3692ac6930ec588943d075d8824470a022b85",
+   "size": 201
+  },
+  "images/sort_desc.png": {
+   "sha512": "d41ced37c228c6a89aeabb8c8e4da15761d1b14b3aa6f5d916d2495e6797e312",
+   "size": 158
+  },
+  "images/sort_desc_disabled.png": {
+   "sha512": "fa4cbcca6c355d28da90ed1b6c050976c4b70476ca550617125af2d7d2fc9c00",
+   "size": 146
   },
   "index.html": {
-   "sha512": "fb84d387ed80856cd40bb2acae8562b1a0a8f4691974fb6985ae18ba6a418363",
-   "size": 998
+   "sha512": "d8ed0ab55f1b0d54afa3952fe0ccfe9ce167b8cc1411ab2308497e35741366e3",
+   "size": 1155
   },
-  "js/ZeroChat.coffee": {
-   "sha512": "17a8549cb7aa24be38dea0a344a5bc13569930c8dc9c571e64bcadc5a51903f2",
-   "size": 4593
+  "index_bak.html": {
+   "sha512": "5d3a13c977c5ba7ace75e45ffb29006cadc12db9e8b4296a76e1fe3c53464f02",
+   "size": 4607
   },
   "js/all.js": {
-   "sha512": "1184d732054e149445903c7a1b4eee2949b514b2a624fc684fcbd3945a7e808b",
-   "size": 11095
-  },
-  "js/lib/ZeroFrame.coffee": {
-   "sha512": "96a11e88429e2fa26c47f5d24bf52d030d506f1dfecb2a4e2c5e034cc5d07e31",
-   "size": 1335
-  },
-  "js/utils/Text.coffee": {
-   "sha512": "5ab4f0010ebb413b2347b1eed737f1bb8c7feb8878361cc0326a224fb25b43b1",
-   "size": 248
-  },
-  "js/utils/Time.coffee": {
-   "sha512": "9cf900d99e200d70da56673d643f17f73d524912ecd6c518d4eb1bbc0c372ec0",
-   "size": 861
+   "sha512": "1c96d7333a6641544b4da64c7a11f7d255fe607190c38f8fb3aa8e456c7a814b",
+   "size": 356940
   }
  },
- "ignore": "data/.*|.git/.*",
- "includes": {
-  "data/users/content.json": {
-   "signers": [],
-   "signers_required": 1
-  }
- },
+ "ignore": "(merged-.*|(js|css)/(?!all.(js|css))|.git/*)",
  "inner_path": "content.json",
- "modified": 1470269215.246112,
+ "modified": 1489125896,
+ "postmessage_nonce_security": true,
+ "settings": {
+  "default_hubs": {
+   "15SJRWb3JPgQsfETwqjJnff4uPVnu29Ebd": {
+    "description": "Hub for P2pdx users. Runner: undiagnosed",
+    "title": "P2pdx hub"
+   }
+  }
+ },
  "sign": [
-  62956042371282093805576065532673991452463493482136653936901718534258980227034,
-  85726020888603768069708701803782343607499616458155011102846850050073274493149
+  6701369242571679182388472659514083075077205779203037897661384077271871412786,
+  115573314945579508239941793381184964314710563045311248715875029565158735859326
  ],
  "signers_sign": "HFGuSlT0n3O+kl+Fqel4YKBPb9l4vh/QmmYI88ouo9VF6hRKCq2EfOubrtmvCaqwRNTwbMSs5Sk5D15LGK9PYcs=",
  "signs": {
-  "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi": "HB3ldiPGcuK4SDKPzHIydMOv5EE7bC+d0xICqrrMLkw2OkZ6/TY4GEVBLR9xXnVWZjTmutHLauk0ETcNXpUZ4vI="
+  "12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi": "G+anC9u86V0bdbb03rJ0z7ZA4RGeGxizItGAMOs0e2am5c+FZ0lyWf+Bv0V3fGtsjXGu1Piy4Cyua/KmzrUcm24="
  },
  "signs_required": 1,
  "title": "p2pdx",
- "zeronet_version": "0.3.7"
+ "zeronet_version": "0.5.3"
 }

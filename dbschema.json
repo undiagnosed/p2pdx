@@ -1,24 +1,106 @@
 {
 	"db_name": "p2pdx",
-	"db_file": "data/p2pdx.db",
-	"version": 2,
+	"db_file": "merged-P2pdx/p2pdx.db",
+	"version": 3,
 	"maps": {
-		"users/.+/data.json": {
-			"to_table": [ "message" ]
+		".+/data/userdb/.+/content.json": {
+			"to_json_table": [ "cert_auth_type", "cert_user_id" ],
+			"to_table": ["user"]
 		},
-		"users/.+/content.json": {
-			"to_keyvalue": [ "cert_user_id" ]
+		".+/data/userdb/users.json": {
+			"to_table": ["user"]
+		},
+		".+/data/users/.+/content.json": {
+			"to_json_table": [ "cert_auth_type", "cert_user_id" ],
+			"file_name": "data.json"
+		},
+		".+/data/users/.+/data.json": {
+			"to_table": [
+				"post",
+				"comment",
+				"follow",
+				{"node": "post_like", "table": "post_like", "key_col": "post_uri", "val_col": "date_added"}
+			],
+			"to_json_table": [ "hub", "user_name", "avatar", "intro" ]
 		}
 	},
 	"tables": {
-		"message": {
+		"json": {
 			"cols": [
+				["json_id", "INTEGER PRIMARY KEY AUTOINCREMENT"],
+				["site", "TEXT"],
+				["directory", "TEXT"],
+				["file_name", "TEXT"],
+				["cert_auth_type", "TEXT"],
+				["cert_user_id", "TEXT"],
+				["hub", "TEXT"],
+				["user_name", "TEXT"],
+				["intro", "TEXT"],
+				["avatar", "TEXT"]
+			],
+			"indexes": ["CREATE UNIQUE INDEX path ON json(directory, site, file_name)"],
+			"schema_changed": 5
+		},
+		"post": {
+			"cols": [
+				["post_id", "INTEGER"],
+				["body", "TEXT"],
+				["meta", "TEXT"],
+				["date_added", "INTEGER"],
+				["json_id", "INTEGER REFERENCES json (json_id)"]
+			],
+			"indexes": ["CREATE UNIQUE INDEX post_key ON post(json_id, post_id)", "CREATE INDEX post_id ON post(post_id)", "CREATE INDEX added ON post(date_added)"],
+			"schema_changed": 5
+		},
+		"post_like": {
+			"cols": [
+				["post_uri", "TEXT"],
+				["date_added", "INTEGER"],
+				["json_id", "INTEGER REFERENCES json (json_id)"]
+			],
+			"indexes": ["CREATE UNIQUE INDEX post_like_key ON post_like(json_id, date_added)", "CREATE INDEX post_uri ON post_like(post_uri)"],
+			"schema_changed": 5
+		},
+		"comment": {
+			"cols": [
+				["comment_id", "INTEGER"],
+				["post_uri", "TEXT"],
 				["body", "TEXT"],
 				["date_added", "INTEGER"],
 				["json_id", "INTEGER REFERENCES json (json_id)"]
 			],
-			"indexes": ["CREATE UNIQUE INDEX message_key ON message(json_id, date_added)"],
-			"schema_changed": 1
+			"indexes": ["CREATE UNIQUE INDEX comment_key ON comment(json_id, comment_id)", "CREATE INDEX comment_post_uri ON comment(post_uri)"],
+			"schema_changed": 5
+		},
+		"follow": {
+			"cols": [
+				["follow_id", "INTEGER"],
+				["user_name", "TEXT"],
+				["auth_address", "TEXT"],
+				["hub", "TEXT"],
+				["date_added", "INTEGER"],
+				["json_id", "INTEGER REFERENCES json (json_id)"]
+			],
+			"indexes": ["CREATE UNIQUE INDEX follow_key ON follow(json_id, follow_id)"],
+			"schema_changed": 5
+		},
+		"user": {
+			"cols": [
+				["auth_address", "TEXT"],
+				["cert_user_id", "TEXT"],
+				["hub", "TEXT"],
+				["user_name", "TEXT"],
+				["avatar", "TEXT"],
+				["intro", "TEXT"],
+				["date_added", "INTEGER"],
+				["json_id", "INTEGER REFERENCES json (json_id)"]
+			],
+			"indexes": ["CREATE INDEX json_id ON user(json_id)", "CREATE INDEX date_added ON user(date_added)"],
+			"schema_changed": 5
 		}
+	},
+	"feeds": {
+		"Posts": "SELECT 'post' AS type, post.date_added AS date_added, 'In ' || json.user_name || \"'s post\" AS title, post.body AS body, '?Post/' || json.site || '/' || REPLACE(json.directory, 'data/users/', '') || '/' || post_id AS url FROM post LEFT JOIN json USING (json_id)",
+		"Comments": "SELECT 'comment' AS type, comment.date_added AS date_added, 'a post' AS title, '@' || user_name || ': ' || comment.body AS body, '?Post/' || json.site || '/' || REPLACE(post_uri, '_', '/') AS url FROM comment LEFT JOIN json USING (json_id)"
 	}
 }
