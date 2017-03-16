@@ -18,24 +18,24 @@ class ContentTests extends Class
             #@table.initTable()
             @need_update = true
             
-            query = """
-            SELECT message.*, keyvalue.value AS cert_user_id FROM message
-            LEFT JOIN json AS data_json USING (json_id)
-            LEFT JOIN json AS content_json ON (
-                data_json.directory = content_json.directory AND content_json.file_name = 'content.json'
-            )
-            LEFT JOIN keyvalue ON (keyvalue.key = 'cert_user_id' AND keyvalue.json_id = content_json.json_id)
-            ORDER BY date_added DESC
-            """
-            Page.cmd "dbQuery", [query], (messages) =>
-                data = []
-                for message in messages
-                    body = message.body.replace(/</g, "&lt;").replace(/>/g, "&gt;")  # Escape html tags in body
-                    row = []
-                    row.push(body)
-                    data.push(row)
-                   
-                @table.setData(data)
+#            query = """
+#            SELECT message.*, keyvalue.value AS cert_user_id FROM message
+#            LEFT JOIN json AS data_json USING (json_id)
+#            LEFT JOIN json AS content_json ON (
+#                data_json.directory = content_json.directory AND content_json.file_name = #'content.json'
+#            )
+#            LEFT JOIN keyvalue ON (keyvalue.key = 'cert_user_id' AND keyvalue.json_id = #content_json.json_id)
+#            ORDER BY date_added DESC
+#            """
+#            Page.cmd "dbQuery", [query], (messages) =>
+#                data = []
+#                for message in messages
+#                    body = message.body.replace(/</g, "&lt;").replace(/>/g, "&gt;")  # Escape html #tags in body
+#                    row = []
+#                    row.push(body)
+#                    data.push(row)
+#                   
+#                @table.setData(data)
 
         @log "tests content"
 

@@ -3,22 +3,30 @@ class ContentHome extends Class
         @loaded = true
         @need_update = false
         @update()
+        @num_users_total = null
+        @user_list_recent = new UserList("recent")
+        @user_list_recent.limit = 5
 
     render: =>
         if @loaded and not Page.on_loaded.resolved then Page.on_loaded.resolve()
+        if @need_update or not @num_users_total
+            @num_peers = (Page.site_info["peers"] or "n/a")
+            Page.cmd "dbQuery", "SELECT COUNT(*) AS num FROM user", (res) =>
+                @num_users_total = res[0]["num"]
+                Page.projector.scheduleRender()
         if @need_update
             @log "Updating"
+            @user_list_recent?.need_update = true
             @need_update = false
-            @num_peers = (Page.site_info["peers"] or "n/a")
-
-            num_users_query = "SELECT value FROM keyvalue WHERE KEY=\'cert_user_id\'"
-            Page.cmd "dbQuery", [num_users_query], (res) =>
-                if not res.error and res.length != 0 # Db not ready yet or No user found
-                    @num_users = res.length #row["count"]
+            
+            #num_users_query = "SELECT value FROM keyvalue WHERE KEY=\'cert_user_id\'"
+            #Page.cmd "dbQuery", [num_users_query], (res) =>
+            #    if not res.error and res.length != 0 # Db not ready yet or No user found
+            #        @num_users = res.length #row["count"]
     
-            Page.cmd "dbQuery", ["SELECT * FROM message"], (res) =>
-                 if not res.error and res.length != 0 # Db not ready yet or No user found
-                    @num_msgs = res.length
+            #Page.cmd "dbQuery", ["SELECT * FROM message"], (res) =>
+            #     if not res.error and res.length != 0 # Db not ready yet or No user found
+            #        @num_msgs = res.length
 
         @log "home content"
 
@@ -43,14 +51,15 @@ class ContentHome extends Class
                             ])
                             h("div.panel-body", [
                                 h("div.list-group", [
-                                    h("a.list-group-item", "undiagnosed")
-                                    h("a.list-group-item", "yoman5000")
-                                    h("a.list-group-item", "fredsmith")
-                                    h("a.list-group-item", "alah")
-                                    h("a.list-group-item", "johnny")
+                                    @user_list_recent.render("top")
+                                    #h("a.list-group-item", "undiagnosed")
+                                    #h("a.list-group-item", "yoman5000")
+                                    #h("a.list-group-item", "fredsmith")
+                                    #h("a.list-group-item", "alah")
+                                    #h("a.list-group-item", "johnny")
                                 ])
                                 h("div.text-right", [
-                                    h("a", "View All 500 Users ", [
+                                    h("a", {href: "?Users", id: "users", onclick: @handleSelectUserClick}, "View All #{@num_users_total} Users ", [
                                         h("i.fa.fa-arrow-circle-right")
                                     ])
                                 ])
