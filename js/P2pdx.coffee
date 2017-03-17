@@ -44,6 +44,7 @@ class P2pdx extends ZeroFrame
         @medications = new ContentMedications()
         @learnmore = new ContentLearnMore()
         @users = new ContentUsers()
+        @search = new ContentSearch()
         @content_create_profile = new ContentCreateProfile()
         @header = new Header()
 
@@ -94,6 +95,8 @@ class P2pdx extends ZeroFrame
             content = @learnmore
         else if @params.urls[0] == "Users"
             content = @users
+        else if @params.urls[0] == "Search"
+            content = @search
         else
             content = @home
         setTimeout ( => @content.update() ), 100

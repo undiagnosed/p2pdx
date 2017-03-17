@@ -27,6 +27,9 @@ class Header extends Class
                             h("div.collapse.navbar-collapse", {id: "navbar"}, [
                                 h("ul.nav.navbar-nav", [
                                     h("li", [
+                                        h("a", {href: "?Search", id: "search", onclick: Page.handleLinkClick}, "Search")
+                                    ])
+                                    h("li", [
                                         h("a", {href: "#Select+user", id: "login", onclick: @handleSelectUserClick}, Page.site_info.cert_user_id)
                                     ])
                                     h("li", [
@@ -55,6 +58,9 @@ class Header extends Class
                         h("div.unselected", [
                             h("div.collapse.navbar-collapse", {id: "navbar"}, [
                                 h("ul.nav.navbar-nav", [
+                                    h("li", [
+                                        h("a", {href: "?Search", id: "search", onclick: Page.handleLinkClick}, "Search")
+                                    ])
                                     h("li", [
                                         h("a", {href: "#Select+user", id: "login", onclick: @handleSelectUserClick}, "Login")
                                     ])

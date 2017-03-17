@@ -31,6 +31,7 @@ ContentVisits.js \
 ContentVitals.js \
 ContentLearnMore.js \
 ContentUsers.js \
+ContentSearch.js \
 Header.js \
 P2pdx.js \
 > all.js
