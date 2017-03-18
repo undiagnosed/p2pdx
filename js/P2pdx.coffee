@@ -46,6 +46,7 @@ class P2pdx extends ZeroFrame
         @users = new ContentUsers()
         @search = new ContentSearch()
         @content_create_profile = new ContentCreateProfile()
+        @profile = new ContentProfile()
         @header = new Header()
 
         if base.href.indexOf("?") == -1
@@ -97,11 +98,15 @@ class P2pdx extends ZeroFrame
             content = @users
         else if @params.urls[0] == "Search"
             content = @search
+        else if @params.urls[0] == "Profile"
+            content = @profile
+            changed = (@profile.auth_address != @params.urls[2])
+            @profile.setUser(@params.urls[1], @params.urls[2]).filter(null)
         else
             content = @home
-        setTimeout ( => @content.update() ), 100
-        if content and (@content != content)
+        if content and (@content != content or changed)
             if @content
+                setTimeout ( => @content.update() ), 100
                 @projector.detach(@content.render)
             @content = content
             @on_site_info.then =>
@@ -283,6 +288,7 @@ class P2pdx extends ZeroFrame
                 @logEnd "Loaded localstorage"
                 @local_storage ?= {}
                 @local_storage.followed_users ?= {}
+                @local_storage.settings ?= {}
                 @on_local_storage.resolve(@local_storage)
 
 
