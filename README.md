@@ -40,7 +40,7 @@ It downloads the latest version of ZeroNet then starts it automatically.
 * Create user name
 
 ### Visit p2pdx
-* Visit [p2pdx](http://127.0.0.1:43110/1NGuD84kVgh3iBTQegdX8z7DbsGLZjHkvz)
+* Visit [p2pdx](http://127.0.0.1:43110/12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi)
 * Login with your ZeroID user name
 * Start sharing and browing medical data
 
