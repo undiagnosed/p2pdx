@@ -49,7 +49,8 @@ Privacy is always a concern when it comes to medical data. Users themselves will
 
 Because of decentralized nature of p2pdx, users may also wish to hide their IP address. Users can configure ZeroNet to use Tor in order to acheive this.
 
-
+## Support
+Support the project by becoming a patron at [Patreon](https://www.patreon.com/undiagnosed). You'll have the opportunity to access priority support, weekly status reports, and feature priority voting rights.
 
 
 
