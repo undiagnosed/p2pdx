@@ -40,7 +40,7 @@ It downloads the latest version of ZeroNet then starts it automatically.
 * Create user name
 
 ### Visit p2pdx
-* Visit [p2pdx](http://127.0.0.1:43110/1NGuD84kVgh3iBTQegdX8z7DbsGLZjHkvz)
+* Visit [p2pdx](http://127.0.0.1:43110/12UQXQ5jsvXUPUSuDY7SzjfFiGqTAeChpi)
 * Login with your ZeroID user name
 * Start sharing and browing medical data
 
@@ -49,7 +49,8 @@ Privacy is always a concern when it comes to medical data. Users themselves will
 
 Because of decentralized nature of p2pdx, users may also wish to hide their IP address. Users can configure ZeroNet to use Tor in order to acheive this.
 
-
+## Support
+Support the project by becoming a patron at [Patreon](https://www.patreon.com/undiagnosed). You'll have the opportunity to access priority support, weekly status reports, and feature priority voting rights.
 
 
 
