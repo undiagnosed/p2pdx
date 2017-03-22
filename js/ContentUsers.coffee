@@ -67,44 +67,54 @@ class ContentUsers extends Class
 				@user_list_suggested?.need_update = true
 
 		h("div#Content.center", [
-			h("input.text.big.search", {placeholder: "Search in users...", value: @search, oninput: @handleSearchInput})
-
-			if not @search
-				[
-					if @user_list_suggested.users.length > 0
-						h("h2.suggested", "Suggested users")
-					h("div.users.cards.suggested", [
-						@user_list_suggested.render("card")
+			h("div.container-fluid", [
+				h("h2", "Users")
+				h("div.row", [
+					h("div.col-sm-4", [
+						h("form.well", [
+							h("input.text.big.search", {placeholder: "Search in users...", value: @search, oninput: @handleSearchInput})
+						])
 					])
-					if @user_list_suggested.users.length == @user_list_suggested.limit
-						h("a.more.suggested", {href: "#", onclick: @handleSuggestedMoreClick}, "Show more...")
-					else if @user_list_suggested.users.length > 0 and @user_list_suggested.loading
-						h("a.more.suggested", {href: "#", onclick: @handleSuggestedMoreClick}, "Loading...")
+					h("div.col-sm-8", [
+						if not @search
+							[
+								if @user_list_suggested.users.length > 0
+									h("h2.suggested", "Suggested users")
+								h("div.users.cards.suggested", [
+									@user_list_suggested.render("card")
+								])
+								if @user_list_suggested.users.length == @user_list_suggested.limit
+									h("a.more.suggested", {href: "#", onclick: @handleSuggestedMoreClick}, "Show more...")
+								else if @user_list_suggested.users.length > 0 and @user_list_suggested.loading
+									h("a.more.suggested", {href: "#", onclick: @handleSuggestedMoreClick}, "Loading...")
 
-					if @user_list_active.users.length > 0
-						h("h2.active", "Most active")
-					h("div.users.cards.active", [
-						@user_list_active.render("card")
+								if @user_list_active.users.length > 0
+									h("h2.active", "Most active")
+								h("div.users.cards.active", [
+									@user_list_active.render("card")
+								])
+								if @user_list_active.users.length == @user_list_active.limit
+									h("a.more.active", {href: "#", onclick: @handleActiveMoreClick}, "Show more...")
+								else if @user_list_active.users.length > 0 and @user_list_active.loading
+									h("a.more.active", {href: "#", onclick: @handleActiveMoreClick}, "Loading...")
+
+								if @user_list_recent.users.length > 0
+									h("h2.recent", "New users in ZeroMe")
+							]
+
+						h("div.users.cards.recent", [
+							@user_list_recent.render("card")
+						])
+						if @user_list_recent.users.length == @user_list_recent.limit
+							h("a.more.recent", {href: "#", onclick: @handleRecentMoreClick}, "Show more...")
+						else if @user_list_recent.users.length > 0 and @user_list_recent.loading
+							h("a.more.recent", {href: "#", onclick: @handleRecentMoreClick}, "Loading...")
+
+						if @user_list_recent.users.length
+							h("h5", {style: "text-align: center"}, "Total: #{@num_users_total} registered users")
 					])
-					if @user_list_active.users.length == @user_list_active.limit
-						h("a.more.active", {href: "#", onclick: @handleActiveMoreClick}, "Show more...")
-					else if @user_list_active.users.length > 0 and @user_list_active.loading
-						h("a.more.active", {href: "#", onclick: @handleActiveMoreClick}, "Loading...")
-
-					if @user_list_recent.users.length > 0
-						h("h2.recent", "New users in ZeroMe")
-				]
-
-			h("div.users.cards.recent", [
-				@user_list_recent.render("card")
+				])
 			])
-			if @user_list_recent.users.length == @user_list_recent.limit
-				h("a.more.recent", {href: "#", onclick: @handleRecentMoreClick}, "Show more...")
-			else if @user_list_recent.users.length > 0 and @user_list_recent.loading
-				h("a.more.recent", {href: "#", onclick: @handleRecentMoreClick}, "Loading...")
-
-			if @user_list_recent.users.length
-				h("h5", {style: "text-align: center"}, "Total: #{@num_users_total} registered users")
 		])
 
 	update: =>

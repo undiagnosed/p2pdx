@@ -5,3 +5,67 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.hub.card { padding: 21px; text-align: left; font-size: 18px; width: 80%; display: block; margin-left: auto; margin-right: auto; }
+.hub .intro { font-weight: lighter; font-size: 16px; margin-top: 7px; }
+.hub .avatars { float: right; }
+.hub .button-join { float: right; margin-left: 20px; }
+.hub .avatar { margin-left: 5px }
+.hubselect { padding-top: 30px }
+
+/* Card */
+.cards { margin-right: -20px }
+.card {
+	border-radius: 4px; box-shadow: 0px 1px 11px #EAEAEA; background-color: white; width: 33%; width: calc(33% - 10px);
+	box-sizing: border-box; margin-right: 10px; margin-bottom: 10px; min-width: 300px; display: inline-block;
+}
+
+/* Avatar */
+.avatar { width: 50px; height: 50px; background: #EEE; border-radius: 100px; display: inline-block; }
+.avatar.empty { vertical-align: top; font-size: 11px; line-height: 51px; text-align: center; text-decoration: none; color: #666; font-weight: bold; }
+
+
+.users .user { padding-left: 70px; padding-bottom: 20px }
+.users .user .nameline { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 26px }
+.users .user .intro { font-weight: 100; font-size: 13px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; min-height: 18px; word-wrap: break-word; }
+.users .user .added { font-size: 11px; color: #999; margin-left: 6px; vertical-align: 3px; }
+.users .user .intro-full { margin-left: -57px; padding-top: 18px; font-weight: 100; line-height: 1.5em; overflow: hidden; max-height: 400px; word-wrap: break-word; }
+.users .button-follow { float: right; margin-left: 5px; }
+.users .user.followed .button-follow, .users .user.followed .button-follow:hover {
+	background-color: #2ecc71 !important; border-color: #2ecc71 !important; color: #FFF; transform: rotate(45deg)
+}
+.users .user.followed .button-follow-big {
+	background-color: #2ecc71 !important; border-color: #2ecc71 !important; color: #FFF
+}
+.users .user.followed .button-follow-big .icon-follow { transform: rotate(45deg); }
+
+.user .name { font-weight: bold; color: #5d68ff; overflow: hidden; max-width: 200px; display: inline-block; white-space: nowrap; vertical-align: text-bottom; text-overflow: ellipsis }
+.user .address, .user .cert_user_id { font-size: 13px; color: #AAA; }
+.user .avatar { position: absolute; margin-left: -67px }
+
+.user.card { padding: 15px; padding-left: 75px; overflow: hidden }
+.user.card.profile { margin-bottom: 30px; }
+.user.card .avatar { margin-top: -4px; position: absolute; margin-left: -60px; }
+.user.card .follow-container { margin-left: -57px; text-align: center; margin-top: 30px; margin-bottom: 20px; }
+
+.users.gray .button-follow { border: 1px solid #aaa; color: #999; }
+.users.gray .button-follow:hover, .users.gray .button-follow:active { color: #2ecc71; }
+.users.gray .name { color: #333; }
+
+.user .uploadable .icon-upload { position: absolute; margin-left: -48px; z-index: 999; margin-top: 7px }
+.user.notseeding .button-follow { border-color: #E0E0E0; }
+.user.card.notseeding .button-follow { border-color: #EFEFEF; }
+
+.user .help { margin-left: -57px; font-size: 14px; color: #AAA; }
+
+.checkbox-skin { background-color: #CCC; width: 35px; height: 18px; border-radius: 15px; transition: all 0.3s ease-in-out; display: inline-block; }
+.checkbox-skin:before {
+	content: ""; position: relative; width: 14px; background-color: white; height: 14px; display: block; border-radius: 100%; margin-top: 2px; margin-left: 2px;
+	transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.checkbox .title { display: inline; line-height: 30px; vertical-align: 4px; margin-left: 11px; }
+.checkbox.checked .checkbox-skin:before { margin-left: 19px; }
+.checkbox.checked .checkbox-skin { background-color: #2ECC71; }
+
+.user-mute { text-align: center; display: block; margin-top: -22px; color: #999; font-size: 14px; margin-bottom: 30px; }
+.user-notfound { text-align: center; font-size: 22px; margin-top: 100px; font-weight: lighter; }
