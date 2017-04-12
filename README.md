@@ -22,6 +22,34 @@ In order for patients to help each other, access to structured medical data is n
  * Search data with basic filtering capabilities
  * Perform research on dataset with R or Python with SQLite reading helper scripts
 
+## Roadmap
+
+The following is a tentative roadmap based on conservative estimates with just free time available to spend on the project. With enough support, more time can be spent on the project and the schedule can be accelerated.
+
+### Summer 2017
+
+* Basic data entry capabilities
+  * Add/Edit/Delete lab results
+* Basic lab result visualization
+  * Reference range visualization, simple history plot
+
+### Fall 2017
+
+* Add support for other data types
+  * Add/Edit/Delete symptoms, vitals, medications, visit history, demographics
+* Basic lab trend visualization
+  * Fit trend with statistical model
+  * Report significant change in value using Reference Change Value method
+
+### Winter 2017 and Beyond
+
+* Support for including images with symptoms and imaging tests
+* Basic search capability
+* Utilities for reading dataset into R for research
+* Automated reading of lab results from PDFs, images
+* State of the art machine learning algorithms applied to diagnosis, anomaly detection, patient similarity, etc.
+* Your feature requests
+
 ## Getting Started
 ### Download ZeroNet
 * Download ZeroBundle package:
